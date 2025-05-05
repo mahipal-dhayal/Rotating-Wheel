@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.wheel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    red 0deg 90deg,
+    green 90deg 180deg,
+    blue 180deg 270deg,
+    yellow 270deg 360deg
+  );
+  mask: radial-gradient(circle, transparent 60px, black 60px);
+  -webkit-mask: radial-gradient(circle, transparent 60px, black 60px);
+  transition: transform 1.5s ease;
+}
+
+.wheel:hover {
+  transform: rotate(360deg);
+}
